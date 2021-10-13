@@ -9,6 +9,6 @@
 </head>
 <body>
 	<h2 class="submit-form">Registration Successful!</h2>
-	<a href="../login.jsp">Login</a>
+	<a href="login.jsp">Login</a>
 </body>
 </html>

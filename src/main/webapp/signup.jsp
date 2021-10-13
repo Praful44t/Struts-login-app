@@ -11,28 +11,28 @@
 <body>
 	<div class="style1">
           <s:actionerror/>
-          <s:form  method="post" action="signupaction.action">
+          <s:form  method="post" action="signupaction">
                 <h1>User<br>Sign Up</h1>
     
                     <div>
                     	<s:label>Mail</s:label>
-                        <s:textfield type="email" name="mailid" required="required"></s:textfield>
+                        <s:textfield type="email" name="user.mailid" required="required"></s:textfield>
                     </div>
     
                     <div>
                     	<s:label>Password</s:label>
-                        <s:password name="password" required="required"></s:password>
+                        <s:password name="user.password" required="required"></s:password>
                     </div>
 					
 					<div>
 						<s:label>Department</s:label>
-						<s:select list="{'developer','HR','marketing'}" name="department"></s:select>
+						<s:select list="{'developer','HR','marketing'}" name="user.department"></s:select>
 						
 					</div>	
 					
 					<div>
 						<s:label>Age</s:label>
-						<s:textfield label="Age" name="age" value="0"/>
+						<s:textfield label="Age" name="user.age" value="0"/>
 					</div>
 					<s:submit value="signup"></s:submit>
                                             

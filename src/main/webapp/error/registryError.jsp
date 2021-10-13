@@ -9,6 +9,6 @@
 </head>
 <body>
 	<h2 class="submit-form">Unable to register</h2>
-	<a href="../signup.jsp">Try again</a>
+	<a href="signup.jsp">Try again</a>
 </body>
 </html>

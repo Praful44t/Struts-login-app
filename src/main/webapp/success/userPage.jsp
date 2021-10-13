@@ -12,9 +12,9 @@
 	<div class="style1">
 				<div align="left" >	
 					<h1>You have logged in!</h1><br>
-					<h3>Welcome, <s:property value="mailid"/></h3>
+					<h3>Welcome, <s:property value="user.mailid"/></h3>
 					<br>
-		  			<h3>Your age = <s:property value="age"/></h3>
+		  			<h3>Your age = <s:property value="user.age"/></h3>
 		  			
 				</div>
 	</div>			

@@ -1,24 +1,20 @@
 package com.example.Action;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts2.interceptor.ServletRequestAware;
-
 import com.example.bean.User;
 import com.example.dao.UserDAO;
 import com.opensymphony.xwork2.ActionSupport;
-import com.opensymphony.xwork2.ModelDriven;
 
-public class LoginAction extends ActionSupport implements ServletRequestAware,ModelDriven<User>{
+public class LoginAction extends ActionSupport{
 
 	private static final long serialVersionUID = -7846336228868064793L;
-	private User user = new User();
-	private UserDAO userDao = new UserDAO();
+	private User user;
+	private UserDAO userDao;
 	
 
 	@Override
 	public String execute() throws Exception {
-		
+		userDao = new UserDAO();
+		user = userDao.searchUser(user.getMailid(),user.getPassword());
 		boolean result = userDao.validateUser(user.getMailid(),user.getPassword());
 		
 		if (result)
@@ -27,21 +23,13 @@ public class LoginAction extends ActionSupport implements ServletRequestAware,Mo
 			return ERROR;
 	}
 
-
-	@Override
-	public User getModel() {
+	public User getUser() {
 		return user;
 	}
 
-
-	@Override
-	public void setServletRequest(HttpServletRequest request) {
-		// TODO Auto-generated method stub
-		
+	public void setUser(User user) {
+		this.user = user;
 	}
-
-	
-
-	
+			
 	
 }

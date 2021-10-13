@@ -83,6 +83,7 @@ public class UserDAO {
 	}
 	
 	public boolean addUser(User user) {
+		System.out.println("\n"+user.getMailid()+" "+user.getDepartment());
 		boolean status = false;
 		Transaction transaction = null;
 		

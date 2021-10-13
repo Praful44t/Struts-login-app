@@ -16,17 +16,17 @@
     
                     <div>
                     	<s:label>Mail</s:label>
-                        <s:textfield type="email" name="mailid" required="required"></s:textfield>
+                        <s:textfield type="email" name="user.mailid" required="required"></s:textfield>
                     </div>
     
                     <div>
                     	<s:label>Password</s:label>
-                        <s:password name="password" required="required"></s:password>
+                        <s:password name="user.password" required="required"></s:password>
                     </div>
 					
 					<div>
 						<s:label>Department</s:label>
-						<s:select list="{'developer','HR','marketing'}" name="department" ></s:select>
+						<s:select list="{'developer','HR','marketing'}" name="user.department" ></s:select>
 					</div>	
 					<s:submit value="login"></s:submit>
                         

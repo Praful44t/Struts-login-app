@@ -8,18 +8,28 @@ public class SignupAction extends ActionSupport{
 
 	private static final long serialVersionUID = -6854295689965894930L;
 	private User user;
-	private UserDAO userDao = new UserDAO();
+	private UserDAO userDao;
 	
 	@Override
 	public String execute() throws Exception {
-		user = new User();
+		
+		userDao = new UserDAO();
 		
 		boolean result = userDao.addUser(user);
-		
 		if (result)
 			return SUCCESS;
 		else
 			return ERROR;
 	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	
 	
 }

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
 <hibernate-mapping>
-  <class name = "com.example.bean.User" table = "user_entity">
+  <class name = "com.example.bean.User" table = "user_entity" schema="public">
       
-      <id name = "mailid" type = "string" column = "mailid">
+      <id name = "user_id" type = "int" column = "user_id">
+      <generator class="identity"></generator>
       </id>
       
+      <property name="mailid" column="mailid" type="string"/>
       <property name = "password" column = "password" type = "string"/>
-      <property name = "department" column = "department" type = "string"/>
       <property name = "age" column = "age" type = "int"/>
+      <property name = "department" column = "department" type = "string"/>
       
    </class>
 
