@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+		
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+ 	<constant name="struts.ui.theme" value="simple" />
+	
+	<package name="default" namespace="/" extends="struts-default">
+
+        
+        <action name = "loginaction" class = "com.example.Action.LoginAction">
+            <result name = "success">/success/userPage.jsp</result>
+            <result name = "error">/error/loginError.jsp</result>
+        </action>
+        
+        <action name = "signupaction" class = "com.example.Action.SignupAction">
+            <result name = "success">/success/registrySuccess.jsp</result>
+            <result name = "error">/error/registryError.jsp</result>
+        </action>
+	</package>
+</struts>
